@@ -1,4 +1,3 @@
-//export variable?
 const cardData = [
     {
         value: 2,
@@ -260,5 +259,8 @@ const cardData = [
         displayValue: "A",
         suit: "club"
     }
-      
-]
+];
+
+
+const randomCard = cardData[Math.floor(Math.random() * cardData.length)];
+console.log(randomCard)
