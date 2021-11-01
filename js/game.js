@@ -1,17 +1,11 @@
 class game {
-    constructor(cards){
-        this.cards = cardData;
-    }
+    constructor(){}
 
-    shuffleCards() {
-        const randomCard = cardData[Math.floor(Math.random() * cardData.length)];
-        return randomCard
-    }
+    checkIfHigher() {}
 
-    checkIfHigher() {
+    checkIfLower() {}
 
-    }
-
+    checkIfEqual() {}
 
 }
 

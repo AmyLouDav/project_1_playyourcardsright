@@ -1,48 +1,71 @@
 // use import/export variable for card array
 
 const buildDom = (html) => {
-    const main = document.querySelector("main");
-    main.innerHTML = html;
-    console.log(main)
-  };
+  const main = document.querySelector("main");
+  main.innerHTML = html;
+  console.log(main)
+};
 
   // First Screen => Splash Screen
 const buildSplashScreen = () => {
   buildDom(`
   <div class="splashContainer">
-  <h1>Play Your Cards Right</h1>
-  <div class="buttonContainer">
+    <h1>Play Your Cards Right</h1>
+    <div class="buttonContainer">
       <button id="button button--red">START</button>
       <button id="button button--black">RULES</button>
+    </div>
   </div>
-  </div>
-  `);
-    const startButton = document.getElementById("button button--red");
-    startButton.addEventListener("click", buildGameScreen);
-  };
+`);
+    
+const startButton = document.getElementById("button button--red");
+  startButton.addEventListener("click", buildGameScreen);
+};
+
+const randomCard = () => { 
+  const cardIndex = Math.floor(Math.random() * cardData.length); //gets a random number based on the length of the carddata array
+  const card = cardData[cardIndex]; //assigns the card object to a variable
+
+  cardData.splice(cardIndex, 1); //deletes the chosen card from the carddata array
+
+  return card;
+}
+
+const generateCard = (cardObject) => {
+  return `<div class="gameCards" data-cardValue="${cardObject.value}">${cardObject.displayValue}${cardObject.suit}</div>`} //generates the card value in the html display
 
   const buildGameScreen = () => {
+   
+    const cardOne = generateCard(randomCard())
+    const cardTwo = generateCard(randomCard())
+    const cardThree = generateCard(randomCard())
+    const cardFour = generateCard(randomCard())
+    const cardFive = generateCard(randomCard())
+    const cardSix = generateCard(randomCard())
+    const cardSeven = generateCard(randomCard())
+    const cardEight = generateCard(randomCard())
+    const cardNine = generateCard(randomCard())
+
     buildDom(`
     <div class="gameContainer">
     <h1>Game Screen</h1>
-    <button id="goToGameOver">to game over screen</button>
+    <button id="goToGameOver">GO TO GAME OVER SCREEN</button>
     </div>
     <div class="gameCardsContainer">
-    <div class="bottomRow">
-      <div class="gameCards">1</div>
-      <div class="gameCards">2</div>
-      <div class="gameCards">3</div>
-      <div class="gameCards">4</div>
+      <div class="row">
+        ${cardNine}
+        ${cardEight}
+        ${cardSeven}
       </div>
-      <div class="middleRow">
-      <div class="gameCards">5</div>
-      <div class="gameCards">6</div>
-      <div class="gameCards">7</div>
-      <div class="gameCards">8</div>
+      <div class="row">
+        ${cardFive}
+        ${cardSix}
+        ${cardFour}
       </div>
-      <div class="topRow">
-      <div class="gameCards">9</div>
-      <div class="gameCards">10</div>
+      <div class="row">
+        ${cardOne}
+        ${cardTwo}
+        ${cardThree}
       </div>
     </div>
     `);
@@ -54,7 +77,7 @@ const buildSplashScreen = () => {
       buildDom(`
       <div class="buildGameOverScreen">
       <h1>Game Over Screen</h1>
-      <button id="tryagainbutton">Try again</button>
+      <button id="tryagainbutton">TRY AGAIN</button>
       </div>
       `)
       const tryagainbutton = document.getElementById("tryagainbutton");
@@ -63,6 +86,7 @@ const buildSplashScreen = () => {
     window.addEventListener("load", buildSplashScreen);
 
   
+  // new game(cardData)
 
 
   

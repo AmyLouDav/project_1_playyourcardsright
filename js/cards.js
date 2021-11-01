@@ -262,5 +262,3 @@ const cardData = [
 ];
 
 
-const randomCard = cardData[Math.floor(Math.random() * cardData.length)];
-console.log(randomCard)
