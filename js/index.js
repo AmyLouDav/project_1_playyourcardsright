@@ -1,19 +1,15 @@
-
-const game = new Game(cardData)
-
-
 const buildDom = (html) => {
   const main = document.querySelector("main");
   main.innerHTML = html;
   console.log(main)
 };
 
-
 const generateCard = (cardObject) => {
-  return `<div class="gameCards" data-cardValue="${cardObject.value}">${cardObject.displayValue}${cardObject.suit}</div>`
+  return `<div class="gameCards gameCard${cardObject.suitColor}" data-cardValue="${cardObject.value}">${cardObject.displayValue}${cardObject.suit}</div>`
 } //generates the card value in the html display
 
 const buildGameScreen = () => {
+  const game = new Game(cardData)
 
   const cardOne = generateCard(game.randomCard())
   const cardTwo = generateCard(game.randomCard())
@@ -24,6 +20,8 @@ const buildGameScreen = () => {
   const cardSeven = generateCard(game.randomCard())
   const cardEight = generateCard(game.randomCard())
   const cardNine = generateCard(game.randomCard())
+  
+
 
   // function flipCard(card) {
   //   card.classList.toggle("turned")
@@ -44,33 +42,33 @@ const buildGameScreen = () => {
     </div>
     <div class="gameCardsContainer">
       <div class="row">
-        ${cardNine}
-        ${cardEight}
-        ${cardSeven}
-      </div>
-      <div class="row">
-        ${cardFive}
-        ${cardSix}
-        ${cardFour}
-      </div>
-      <div class="row">
         ${cardOne}
         ${cardTwo}
         ${cardThree}
       </div>
+      <div class="row">
+        ${cardFour}
+        ${cardFive}
+        ${cardSix}
+      </div>
+      <div class="row">
+        ${cardSeven}
+        ${cardEight}
+        ${cardNine}
+      </div>
     </div>
     `);
+
   const goToGameOverButton = document.getElementById("goToGameOver");
   goToGameOverButton.addEventListener("click", buildGameOverScreen);
 
   const guessHiButton = document.getElementById("guessHi");
   guessHiButton.addEventListener("click", ()=>game.guessHand('h'));
+
   const guessLowButton = document.getElementById("guessLow");
   guessLowButton.addEventListener("click", ()=>game.guessHand('l'));
 };
 
-// const checkIfHigherButton = document.getElementById("checkIfHigher");
-// checkIfHigherButton.addEventListener("click")
 
 const buildGameOverScreen = () => {
   buildDom(`
@@ -90,13 +88,13 @@ const buildSplashScreen = () => {
   <div class="splashContainer">
     <h1>Play Your Cards Right</h1>
     <div class="buttonContainer">
-      <button id="button button--red">START</button>
-      <button id="button button--black">RULES</button>
+      <button id="button-red" class="button-red">START</button>
+      <button id="button-black" class="button button-black">RULES</button>
     </div>
   </div>
 `);
 
-const startButton = document.getElementById("button button--red");
+const startButton = document.getElementById("button-red");
 startButton.addEventListener("click", buildGameScreen);
 }
 

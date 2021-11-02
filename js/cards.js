@@ -2,262 +2,314 @@ const cardData = [
     {
         value: 2,
         displayValue: "2",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 3,
         displayValue: "3",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 4,
         displayValue: "4",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 5,
         displayValue: "5",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 6,
         displayValue: "6",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 7,
         displayValue: "7",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 8,
         displayValue: "8",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 9,
         displayValue: "9",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 10,
         displayValue: "10",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 11,
         displayValue: "J",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 12,
         displayValue: "Q",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 13,
         displayValue: "K",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 14,
         displayValue: "A",
-        suit: "heart"
+        suit: "♥",
+        suitColor: "Red"
     },
     {
         value: 2,
         displayValue: "2",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 3,
         displayValue: "3",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 4,
         displayValue: "4",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 5,
         displayValue: "5",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 6,
         displayValue: "6",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 7,
         displayValue: "7",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 8,
         displayValue: "8",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 9,
         displayValue: "9",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 10,
         displayValue: "10",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 11,
         displayValue: "J",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 12,
         displayValue: "Q",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 13,
         displayValue: "K",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 14,
         displayValue: "A",
-        suit: "diamond"
+        suit: "♦",
+        suitColor: "Red"
     },
     {
         value: 2,
         displayValue: "2",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 3,
         displayValue: "3",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 4,
         displayValue: "4",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 5,
         displayValue: "5",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 6,
         displayValue: "6",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 7,
         displayValue: "7",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 8,
         displayValue: "8",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 9,
         displayValue: "9",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 10,
         displayValue: "10",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 11,
         displayValue: "J",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 12,
         displayValue: "Q",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 13,
         displayValue: "K",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 14,
         displayValue: "A",
-        suit: "spade"
+        suit: "♠",
+        suitColor: "Black"
     },
     {
         value: 2,
         displayValue: "2",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 3,
         displayValue: "3",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 4,
         displayValue: "4",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 5,
         displayValue: "5",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 6,
         displayValue: "6",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 7,
         displayValue: "7",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 8,
         displayValue: "8",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 9,
         displayValue: "9",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 10,
         displayValue: "10",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 11,
         displayValue: "J",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 12,
         displayValue: "Q",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 13,
         displayValue: "K",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     },
     {
         value: 14,
         displayValue: "A",
-        suit: "club"
+        suit: "♣",
+        suitColor: "Black"
     }
 ];
 
