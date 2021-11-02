@@ -1,11 +1,34 @@
 class game {
-    constructor(){}
+    constructor(){
+        this.playedCards = []
+    }
 
-    checkIfHigher() {}
+    checkIfHigher() {
+        console.log(this.playedCards[0].getAttribute("cardData-value"),
+        this.playedCards[1].getAttribute("cardData-value")
+        )
+        if(this.playedCards[0].getAttribute("cardData-value") > this.playedCards[1].getAttribute("cardData-value")){
+            return true
+        }
+    }
 
-    checkIfLower() {}
+    checkIfLower() {
+        console.log(this.playedCards[0].getAttribute("cardData-value"),
+        this.playedCards[1].getAttribute("cardData-value")
+        )
+        if(this.playedCards[0].getAttribute("cardData-value") < this.playedCards[1].getAttribute("cardData-value")){
+            return true
+        }
+    }
 
-    checkIfEqual() {}
+    checkIfEqual() {
+        console.log(this.playedCards[0].getAttribute("cardData-value"),
+        this.playedCards[1].getAttribute("cardData-value")
+        )
+        if(this.playedCards[0].getAttribute("cardData-value") === this.playedCards[1].getAttribute("cardData-value")){
+            return true
+        }
+    }
 
 }
 
