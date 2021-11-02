@@ -1,45 +1,52 @@
-class game {
+class Game {
     constructor(){
+        this.cards = cardData
         this.playedCards = []
+        this.gameOn = true;
+        this.guess = null;
+        this.playerCard = 1;
+        this.hand = 2;
     }
 
-    checkIfHigher() {
-        console.log(this.playedCards[0].getAttribute("cardData-value"),
-        this.playedCards[1].getAttribute("cardData-value")
-        )
-        if(this.playedCards[0].getAttribute("cardData-value") > this.playedCards[1].getAttribute("cardData-value")){
-            return true
+    playHand() {
+        if(this.guess === this.compare()){
+        this.playerCard += 1;
+        this.hand += 1;
+        console.log('handplayedguessed')
+        }
+        else{
+            this.gameOn = false
+            console.log('handplayedlost')
         }
     }
 
-    checkIfLower() {
-        console.log(this.playedCards[0].getAttribute("cardData-value"),
-        this.playedCards[1].getAttribute("cardData-value")
-        )
-        if(this.playedCards[0].getAttribute("cardData-value") < this.playedCards[1].getAttribute("cardData-value")){
-            return true
+    guessHand(input) {
+        this.guess = input;
+        this.playHand();
+    }
+
+
+    compare() {
+        if(this.playedCards[this.playerCard].value > this.playedCards[this.hand].value) {
+            return "h"
+        }
+        else if(this.playedCards[this.playerCard].value < this.playedCards[this.hand].value) {
+            return "l"
+        }
+        else {
+            return "e"
         }
     }
 
-    checkIfEqual() {
-        console.log(this.playedCards[0].getAttribute("cardData-value"),
-        this.playedCards[1].getAttribute("cardData-value")
-        )
-        if(this.playedCards[0].getAttribute("cardData-value") === this.playedCards[1].getAttribute("cardData-value")){
-            return true
-        }
-    }
+    randomCard() { 
+        const cardIndex = Math.floor(Math.random() * this.cards.length); //gets a random number based on the length of the carddata array
+        const card = this.cards[cardIndex]; //assigns the card object to a variable
+        this.cards.splice(cardIndex, 1); //deletes the chosen card from the carddata array
+        this.playedCards.push(card)
+        return card;
+      }
+
 
 }
 
-// const copyOfCardData = cardData.slice();
 
-// console.log(copyOfCardData);
-// // SPLICE (i,k)   // from position i remove k elements
-// const randomNumber = Math.floor(Math.random() * copyOfCardData.length);
-// const h  = copyOfCardData.splice(randomNumber, 1);
-
-// console.log('removedCard', removedCard);
-// console.log('copyOfCardData', copyOfCardData);
-
-// console.log(copyOfCardData[0].displayValue);
