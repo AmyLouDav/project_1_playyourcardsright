@@ -40,14 +40,6 @@ const buildGameScreen = () => {
   
 
 
-  // function flipCard(card) {
-  //   card.classList.toggle("turned")
-  // }
-
-  // function freezeCard(card){
-  //   card.classList.toggle("frozen")
-  // }
-
   buildDom(`
     <div class="gameContainer">
     <h1>Game Screen</h1>
@@ -107,6 +99,21 @@ const buildWinScreen = () => {
       `)
   const playAgainButton = document.getElementById("playAgainButton");
   playAgainButton.addEventListener("click", buildGameScreen);
+}
+
+const flipCard = () => {
+  buildDom(`
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img style="width:150px;height:200px;">
+    </div>
+    <div class="flip-card-back">
+    </div>
+  </div>
+</div>
+`)
+
 }
 
 
