@@ -14,24 +14,23 @@ class Game {
             this.playerCard += 1;
             this.hand += 1;
             console.log('handplayedguessed')
-            if (this.hand === 9) {
+            if (this.playerCard === 8) {
                 buildWinScreen()
                 //set timeout before the win screen appears
-        }
-        else {
+            }
+        } else {
             this.gameOn = false
             console.log('handplayedlost')
             buildGameOverScreen()
             //wait for two seconds and then build game over screen
         }
     }
-}
+
 
     guessHand(input) {
         this.guess = input;
         this.playHand();
     }
-
 
     compare() {
         if (this.playedCards[this.playerCard].value < this.playedCards[this.hand].value) {
