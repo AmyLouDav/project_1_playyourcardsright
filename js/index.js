@@ -4,6 +4,23 @@ const buildDom = (html) => {
   console.log(main)
 };
 
+const buildSplashScreen = () => {
+  buildDom(`
+  <div class="splashContainer">
+    <h1>Play Your Cards Right</h1>
+    <div class="buttonContainer">
+      <button id="button-red" class="button-red">START</button>
+      <button id="button-black" class="button button-black">RULES</button>
+    </div>
+  </div>
+`);
+
+const startButton = document.getElementById("button-red");
+startButton.addEventListener("click", buildGameScreen);
+}
+
+  window.addEventListener("load", buildSplashScreen);
+
 const generateCard = (cardObject) => {
   return `<div class="gameCards gameCard${cardObject.suitColor}" data-cardValue="${cardObject.value}">${cardObject.displayValue}${cardObject.suit}</div>`
 } //generates the card value in the html display
@@ -81,24 +98,18 @@ const buildGameOverScreen = () => {
   tryagainbutton.addEventListener("click", buildGameScreen);
 }
 
-
-// First Screen => Splash Screen
-const buildSplashScreen = () => {
+const buildWinScreen = () => {
   buildDom(`
-  <div class="splashContainer">
-    <h1>Play Your Cards Right</h1>
-    <div class="buttonContainer">
-      <button id="button-red" class="button-red">START</button>
-      <button id="button-black" class="button button-black">RULES</button>
-    </div>
-  </div>
-`);
-
-const startButton = document.getElementById("button-red");
-startButton.addEventListener("click", buildGameScreen);
+      <div class="buildWinScreen">
+      <h1>Yay! You won!</h1>
+      <button id="playAgainButton">PLAY AGAIN</button>
+      </div>
+      `)
+  const playAgainButton = document.getElementById("playAgainButton");
+  playAgainButton.addEventListener("click", buildGameScreen);
 }
 
-  window.addEventListener("load", buildSplashScreen);
+
 
 
 
