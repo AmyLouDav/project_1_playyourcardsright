@@ -1,4 +1,5 @@
 .splashContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,16 +16,21 @@ h1 {
     font-size: 100px;
     color: rgb(199, 37, 37);
     margin: 0 auto;
+    width: 100%;
     display: flex;
+    align-content: center;
+    justify-content: center;
     font-weight: 100;
+    text-align: center;
 }
 
 .buttonContainer {
-    width: 40%;
     height: 40%;
     display: flex;
     flex-direction: column;
     align-content: center;
+    width: 100%;
+    justify-content: center;
 }
 
 button {
@@ -40,9 +46,9 @@ button {
 .button-red {
     background-color: rgb(199, 37, 37);
     color:blanchedalmond;
+    width: 30%;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    padding-left: 150px;
 }
 .button-black {
     background-color: black;
@@ -50,6 +56,9 @@ button {
     display: flex;
     flex-direction: column;
     align-content: center;
+    text-align: center;
+    padding-left: 150px;
+    width: 30%;
 }
 
 #goBackButton {
@@ -60,9 +69,13 @@ button {
     background-color: blanchedalmond;
 }
 
+#playAgainButton {
+    background-color: blanchedalmond;
+}
+
 li {
     font-family: "Ultra", serif;
-    font-size: 50px;  
+    font-size: 40px;  
     display: flex;
     color: blanchedalmond;
     text-align: center;

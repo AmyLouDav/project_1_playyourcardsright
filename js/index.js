@@ -51,10 +51,7 @@ const buildGameScreen = () => {
   const cardNine = generateCard(game.randomCard());
 
   buildDom(`
-  // <audio autoplay loop>
-  // <source src="audio/themetune.mp3" type=“audio/mpeg”>
-  // </audio>
-  
+ 
     <div class="gameContainer">
     <div class="buttonContainer">
     <button id="guessHi" class="button button-red">HIGHER</button>
@@ -101,7 +98,7 @@ const buildGameOverScreen = () => {
 const buildWinScreen = () => {
   buildDom(`
       <div class="buildWinScreen">
-      <h1>WOO HOO! YOU WON!</h1>
+      <h1>Woo hoooooo! YOU WON!</h1>
       <button id="playAgainButton">PLAY AGAIN</button>
       </div>
       `);
@@ -114,11 +111,11 @@ const buildRulesScreen = () => {
       <div class="buildRulesScreen">
       <h1>Rules!</h1>
       <ol>
-        <li>Guess if the next card is higher or lower</li>
-        <li>Aces are high</li>
-        <li>You don't get anything for a pair</li>
+        <li>♥  Guess if the next card is higher or lower</li>
+        <li>♦  Aces are high</li>
+        <li>♣  You don't get anything for a pair</li>
       </ol>
-      <button id="goBackButton">go back</button>
+      <button id="goBackButton">GO BACK</button>
       </div>
       `);
   const goBackButton = document.getElementById("goBackButton");

@@ -26,14 +26,14 @@ class Game {
       if (this.playerCard === 8) {
         setTimeout(() => {
           buildWinScreen();
-        }, 2000);
+        }, 1000);
       }
     } else {
       this.gameOn = false;
       // console.log("handplayedlost");
       setTimeout(() => {
         buildGameOverScreen();
-      }, 3000);
+      }, 2000);
     }
   }
 
