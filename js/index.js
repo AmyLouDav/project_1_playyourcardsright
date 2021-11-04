@@ -15,6 +15,9 @@ const buildSplashScreen = () => {
   </div>
 `);
 
+  const rulesButton = document.getElementById("button-black");
+  rulesButton.addEventListener("click", buildRulesScreen);
+
   const startButton = document.getElementById("button-red");
   startButton.addEventListener("click", buildGameScreen);
 };
@@ -48,7 +51,6 @@ const buildGameScreen = () => {
 
   buildDom(`
     <div class="gameContainer">
-    <h1>Game Screen</h1>
     <div class="buttonContainer">
     <button id="guessHi" class="button button-red">HIGHER</button>
     <button id="guessLow" class="button button-black">LOWER</button>
@@ -101,3 +103,20 @@ const buildWinScreen = () => {
   const playAgainButton = document.getElementById("playAgainButton");
   playAgainButton.addEventListener("click", buildGameScreen);
 };
+
+const buildRulesScreen = () => {
+  buildDom(`
+      <div class="buildRulesScreen">
+      <h1>Rules!</h1>
+      <ol>
+        <li>Guess if the next card is higher or lower</li>
+        <li>Aces are high</li>
+        <li>You don't get anything for a pair</li>
+      </ol>
+      <button id="goBackButton">go back</button>
+      </div>
+      `);
+  const goBackButton = document.getElementById("goBackButton");
+  goBackButton.addEventListener("click", buildSplashScreen);
+};
+
