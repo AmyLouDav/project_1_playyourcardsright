@@ -10,19 +10,31 @@ class Game {
 
   playHand() {
     console.log(this.playedCards);
+    const allCards = document.querySelectorAll(".gameCards");
+
+    for (let i = 0; i < allCards.length; i++) {
+      if (allCards[i].classList.contains("gameCards-showCard") === false) {
+        allCards[i].classList.add("gameCards-showCard");
+
+        break;
+      }
+    }
+
     if (this.guess === this.compare()) {
       this.playerCard += 1;
       this.hand += 1;
       console.log("handplayedguessed");
       if (this.playerCard === 8) {
-        buildWinScreen();
-        //wait for two seconds and then build win screen
+        setTimeout(() => {
+          buildWinScreen();
+        }, 2000);
       }
     } else {
       this.gameOn = false;
       console.log("handplayedlost");
-      buildGameOverScreen();
-      //wait for two seconds and then build game over screen
+      setTimeout(() => {
+        buildGameOverScreen();
+      }, 3000);
     }
   }
 

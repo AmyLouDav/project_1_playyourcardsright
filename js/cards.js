@@ -311,6 +311,18 @@ const cardData = [
         suit: "♣",
         suitColor: "Black"
     }
+    // {
+    //     value: 15,
+    //     displayValue: "JOKER",
+    //     suit: "🃏",
+    //     suitColor: "Black"
+    // },
+    // {
+    //     value: 15 ,
+    //     displayValue: "JOKER",
+    //     suit: "🃏",
+    //     suitColor: "Red"
+    // }
 ];
 
 
