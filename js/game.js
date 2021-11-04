@@ -15,7 +15,6 @@ class Game {
     for (let i = 0; i < allCards.length; i++) {
       if (allCards[i].classList.contains("gameCards-showCard") === false) {
         allCards[i].classList.add("gameCards-showCard");
-
         break;
       }
     }

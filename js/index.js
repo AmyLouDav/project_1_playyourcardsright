@@ -37,6 +37,7 @@ const generateCard = (cardObject, isFirst) => {
 };
 
 const buildGameScreen = () => {
+
   const game = new Game(cardData);
 
   const cardOne = generateCard(game.randomCard(), true);
@@ -50,6 +51,10 @@ const buildGameScreen = () => {
   const cardNine = generateCard(game.randomCard());
 
   buildDom(`
+  // <audio autoplay loop>
+  // <source src="audio/themetune.mp3" type=“audio/mpeg”>
+  // </audio>
+  
     <div class="gameContainer">
     <div class="buttonContainer">
     <button id="guessHi" class="button button-red">HIGHER</button>
@@ -85,7 +90,7 @@ const buildGameScreen = () => {
 const buildGameOverScreen = () => {
   buildDom(`
       <div class="buildGameOverScreen">
-      <h1>Game Over Screen</h1>
+      <h1>BETTER LUCK NEXT TIME!</h1>
       <button id="tryagainbutton">TRY AGAIN</button>
       </div>
       `);
@@ -96,7 +101,7 @@ const buildGameOverScreen = () => {
 const buildWinScreen = () => {
   buildDom(`
       <div class="buildWinScreen">
-      <h1>Yay! You won!</h1>
+      <h1>WOO HOO! YOU WON!</h1>
       <button id="playAgainButton">PLAY AGAIN</button>
       </div>
       `);
