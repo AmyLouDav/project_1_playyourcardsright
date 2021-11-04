@@ -1,177 +1,174 @@
 .splashContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
-    background-color: #065706;
-    /* background-image: url('./images/background.jpg') no repeat; */
+  background-color: #065706;
 }
 
 h1 {
-    font-family: "Ultra", serif;
-    font-size: 100px;
-    color: rgb(199, 37, 37);
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-weight: 100;
-    text-align: center;
+  font-family: "Ultra", serif;
+  font-size: 100px;
+  color: rgb(199, 37, 37);
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .buttonContainer {
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 button {
-    font-family: "Ultra", serif;
-    font-size: 50px;
-    border: 0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    height: 100px;
-    padding: 10px 20px;
+  font-family: "Ultra", serif;
+  font-size: 50px;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 100px;
+  padding: 10px 20px;
 }
 
 .button-red {
-    background-color: rgb(199, 37, 37);
-    color:blanchedalmond;
-    width: 30%;
-    display: flex;
-    padding-left: 150px;
+  background-color: rgb(199, 37, 37);
+  color: blanchedalmond;
+  width: 30%;
 }
 .button-black {
-    background-color: black;
-    color: blanchedalmond;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-    padding-left: 150px;
-    width: 30%;
+  background-color: black;
+  color: blanchedalmond;
+  text-align: center;
+  width: 30%;
 }
 
 #goBackButton {
-    background-color:blanchedalmond
+  background-color: blanchedalmond;
 }
 
 #tryagainbutton {
-    background-color: blanchedalmond;
+  background-color: blanchedalmond;
 }
 
 #playAgainButton {
-    background-color: blanchedalmond;
+  background-color: blanchedalmond;
 }
 
 li {
-    font-family: "Ultra", serif;
-    font-size: 40px;  
-    display: flex;
-    color: blanchedalmond;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  font-family: "Ultra", serif;
+  font-size: 40px;
+  display: flex;
+  color: blanchedalmond;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .gameCards {
-    width: 150px;
-    height: 200px;
-    border-radius: 2px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 20px;
-    font-size: xx-large;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Ultra", serif;
-    perspective: 1000px;
+  width: 150px;
+  height: 200px;
+  border-radius: 2px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ultra", serif;
+  perspective: 1000px;
 }
 
 .gameCardRed {
-    color: rgb(199, 37, 37);
+  color: rgb(199, 37, 37);
 }
 
 .gameCardBlack {
-    color: black;
+  color: black;
 }
 
 .gameCardsContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
-    height: 500px;
-    margin: auto;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  text-align: center;
 }
 
 .row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .guessHi {
-    display: flex;
+  display: flex;
 }
 
 .gameCardInner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 2s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 2s;
+  transform-style: preserve-3d;
 }
 
 .gameCards-showCard .gameCardInner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.gameCardFront, .gameCardBack {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.gameCardFront,
+.gameCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gameCardFront {
   background-color: blanchedalmond;
   background-image: linear-gradient(
-    45deg,
-    black 25%,
-    transparent 25%,
-    transparent 75%,
-    black 75%,
-    black
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
     ),
     linear-gradient(
-    -45deg,
-    black 25%,
-    transparent 25%,
-    transparent 75%,
-    black 75%,
-    black
+      -45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
     );
   background-size: 60px 60px;
 }
 
 .gameCardBack {
-    background-color: blanchedalmond;
-    transform: rotateY(180deg);
+  background-color: blanchedalmond;
+  transform: rotateY(180deg);
+}
+
+.buildGameOverScreen {
+    display: flex;
+    flex-direction: column;
 }

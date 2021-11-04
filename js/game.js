@@ -6,6 +6,9 @@ class Game {
     this.guess = null;
     this.playerCard = 0;
     this.hand = 1;
+
+    this.correctanswer = new Audio("audio/correctanswer.wav");
+    this.gameover = new Audio("audio/gameover.wav");
   }
 
   playHand() {
@@ -20,6 +23,7 @@ class Game {
     }
 
     if (this.guess === this.compare()) {
+      this.correctanswer.play();
       this.playerCard += 1;
       this.hand += 1;
       // console.log("handplayedguessed");
@@ -31,6 +35,7 @@ class Game {
     } else {
       this.gameOn = false;
       // console.log("handplayedlost");
+      this.gameover.play();
       setTimeout(() => {
         buildGameOverScreen();
       }, 2000);
