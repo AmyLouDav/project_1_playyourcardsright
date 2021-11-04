@@ -23,7 +23,7 @@ class Game {
     if (this.guess === this.compare()) {
       this.playerCard += 1;
       this.hand += 1;
-      console.log("handplayedguessed");
+      // console.log("handplayedguessed");
       if (this.playerCard === 8) {
         setTimeout(() => {
           buildWinScreen();
@@ -31,7 +31,7 @@ class Game {
       }
     } else {
       this.gameOn = false;
-      console.log("handplayedlost");
+      // console.log("handplayedlost");
       setTimeout(() => {
         buildGameOverScreen();
       }, 3000);
