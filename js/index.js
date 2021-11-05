@@ -19,7 +19,6 @@ const buildSplashScreen = () => {
 
   const startButton = document.getElementById("button-red");
   startButton.addEventListener("click", buildGameScreen);
-
 };
 
 window.addEventListener("load", buildSplashScreen);
@@ -36,6 +35,24 @@ const generateCard = (cardObject, isFirst) => {
                </div>
              </div>
           </div>`;
+};
+
+const buildRulesScreen = () => {
+  buildDom(`
+      <div class="buildRulesScreen">
+        <h1>Rules!</h1>
+        <ol>
+          <li>♥  Guess if the next card is higher or lower</li>
+          <li>♦  Aces are high</li>
+          <li>♣  You don't get anything for a pair</li>
+        </ol>
+        <div class="buttonContainer">
+          <button id="goBackButton">GO BACK</button>
+        </div>
+      </div>
+      `);
+  const goBackButton = document.getElementById("goBackButton");
+  goBackButton.addEventListener("click", buildSplashScreen);
 };
 
 const buildGameScreen = () => {
@@ -114,20 +131,4 @@ const buildWinScreen = () => {
   audio.play();
 };
 
-const buildRulesScreen = () => {
-  buildDom(`
-      <div class="buildRulesScreen">
-        <h1>Rules!</h1>
-        <ol>
-          <li>♥  Guess if the next card is higher or lower</li>
-          <li>♦  Aces are high</li>
-          <li>♣  You don't get anything for a pair</li>
-        </ol>
-        <div class="buttonContainer">
-          <button id="goBackButton">GO BACK</button>
-        </div>
-      </div>
-      `);
-  const goBackButton = document.getElementById("goBackButton");
-  goBackButton.addEventListener("click", buildSplashScreen);
-};
+
